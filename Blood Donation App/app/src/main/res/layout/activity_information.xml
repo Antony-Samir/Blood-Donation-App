@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".InformationActivity">
+
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_marginTop="1dp"
+        android:background="#0F439D"
+        app:layout_constraintBottom_toTopOf="@+id/gif"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/Background"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/about_us"
+            android:textColor="#D61010"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="21dp"
+            android:layout_marginEnd="104dp"
+            android:background="@mipmap/blood_drop"
+            app:layout_constraintBottom_toBottomOf="@+id/textView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/textView"
+            app:layout_constraintTop_toTopOf="@+id/textView"
+            app:layout_constraintVertical_bias="1.0" />
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <TextView
+        android:id="@+id/InfoTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="21dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="229dp"
+        android:layout_marginBottom="32dp"
+        android:text="@string/what_is_blood_donation"
+        android:textAlignment="center"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/DummyTextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/gif" />
+
+
+    <pl.droidsonroids.gif.GifImageView
+        android:id="@+id/gif"
+        android:layout_width="187dp"
+        android:layout_height="76dp"
+        android:layout_marginStart="114dp"
+        android:layout_marginEnd="110dp"
+        android:layout_marginBottom="43dp"
+        android:src="@drawable/heart"
+        app:layout_constraintBottom_toTopOf="@+id/InfoTitle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+
+    <TextView
+        android:id="@+id/DummyTextView"
+        android:layout_width="369dp"
+        android:layout_height="316dp"
+        android:layout_marginStart="19dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="23dp"
+        android:text="@string/dummy"
+        android:textAlignment="viewStart"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/InfoTitle" />
+
+    <TextView
+        android:id="@+id/infoTxtView"
+        android:layout_width="wrap_content"
+        android:layout_height="19dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="95dp"
+        android:text="@string/more_info"
+        android:textColor="@color/purple_700"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/locationTxtView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/DummyTextView" />
+
+    <TextView
+        android:id="@+id/locationTxtView"
+        android:layout_width="wrap_content"
+        android:layout_height="19dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="59dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="95dp"
+        android:text="@string/our_location"
+        android:textColor="@color/purple_700"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/mailTxtView"
+        app:layout_constraintStart_toEndOf="@+id/infoTxtView"
+        app:layout_constraintTop_toBottomOf="@+id/DummyTextView"
+        app:layout_constraintVertical_bias="0.473" />
+
+    <TextView
+        android:id="@+id/calendarTxtView"
+        android:layout_width="wrap_content"
+        android:layout_height="19dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="36dp"
+        android:text="Make Event"
+        android:textColor="@color/purple_700"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/mailTxtView"
+        app:layout_constraintStart_toEndOf="@+id/infoTxtView"
+        app:layout_constraintTop_toBottomOf="@+id/locationTxtView"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/mailTxtView"
+        android:layout_width="wrap_content"
+        android:layout_height="19dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="59dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginBottom="95dp"
+        android:text="@string/send_mail"
+        android:textColor="@color/purple_700"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/locationTxtView"
+        app:layout_constraintTop_toBottomOf="@+id/DummyTextView"
+        app:layout_constraintVertical_bias="0.473" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

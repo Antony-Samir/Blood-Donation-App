@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RegisterAsDonorActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginBottom="13dp"
+        android:background="#0F439D"
+        app:layout_constraintBottom_toTopOf="@+id/RegisterTitle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/Background"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/be_a_donor"
+            android:textColor="#D61010"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="9dp" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="21dp"
+            android:layout_marginEnd="104dp"
+            android:background="@mipmap/blood_drop"
+            app:layout_constraintBottom_toBottomOf="@+id/textView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/textView"
+            app:layout_constraintTop_toTopOf="@+id/textView"
+            app:layout_constraintVertical_bias="1.0" />
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <TextView
+        android:id="@+id/RegisterTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="223dp"
+        android:layout_marginBottom="13dp"
+        android:text="@string/please_fill_up_your_data"
+        android:textAlignment="center"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/NameTxtView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+
+    <TextView
+        android:id="@+id/NameTxtView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="349dp"
+        android:layout_marginBottom="15dp"
+        android:text="@string/name"
+        app:layout_constraintBottom_toTopOf="@+id/NameTxt"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/RegisterTitle"
+        app:layout_constraintTop_toBottomOf="@+id/RegisterTitle" />
+
+    <EditText
+        android:id="@+id/NameTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="3dp"
+        android:layout_marginEnd="170dp"
+        android:layout_marginBottom="15dp"
+        android:ems="10"
+        android:importantForAutofill="no"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/PhoneTxtView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/NameTxtView"
+        app:layout_constraintTop_toBottomOf="@+id/NameTxtView" />
+
+    <TextView
+        android:id="@+id/PhoneTxtView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="342dp"
+        android:layout_marginBottom="15dp"
+        android:text="@string/phone"
+        app:layout_constraintBottom_toTopOf="@+id/PhoneTxt"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/NameTxt"
+        app:layout_constraintTop_toBottomOf="@+id/NameTxt" />
+
+    <EditText
+        android:id="@+id/PhoneTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="169dp"
+        android:layout_marginBottom="12dp"
+        android:ems="10"
+        android:inputType="phone"
+        app:layout_constraintBottom_toTopOf="@+id/AgeTxtView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/PhoneTxtView"
+        app:layout_constraintTop_toBottomOf="@+id/PhoneTxtView"
+        android:importantForAutofill="no" />
+
+    <TextView
+        android:id="@+id/AgeTxtView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="341dp"
+        android:layout_marginBottom="14dp"
+        android:text="@string/age"
+        app:layout_constraintBottom_toTopOf="@+id/AgeTxt"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/PhoneTxt"
+        app:layout_constraintTop_toBottomOf="@+id/PhoneTxt" />
+
+    <EditText
+        android:id="@+id/AgeTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="169dp"
+        android:layout_marginBottom="27dp"
+        android:ems="10"
+        android:inputType="numberSigned"
+        app:layout_constraintBottom_toTopOf="@+id/BloodTxtView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/AgeTxtView"
+        app:layout_constraintTop_toBottomOf="@+id/AgeTxtView"
+        android:importantForAutofill="no" />
+
+    <TextView
+        android:id="@+id/BloodTxtView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="316dp"
+        android:layout_marginBottom="18dp"
+        android:text="@string/blood_type"
+        app:layout_constraintBottom_toTopOf="@+id/BloodTypeSpinner2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/AgeTxt" />
+
+    <Spinner
+        android:id="@+id/BloodTypeSpinner2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="23dp"
+        android:entries="@array/bloodType"
+        app:layout_constraintBottom_toTopOf="@+id/LocationTxtView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/BloodTxtView" />
+
+    <TextView
+        android:id="@+id/LocationTxtView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="27dp"
+        android:layout_marginEnd="313dp"
+        android:layout_marginBottom="22dp"
+        android:text="@string/your_location"
+        app:layout_constraintBottom_toTopOf="@+id/LocationSpinner2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/BloodTypeSpinner2" />
+
+    <Spinner
+        android:id="@+id/LocationSpinner2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="42dp"
+        android:entries="@array/Location"
+        app:layout_constraintBottom_toTopOf="@+id/SubmitBtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/LocationTxtView" />
+
+    <Button
+        android:id="@+id/SubmitBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="52dp"
+        android:text="@string/submit"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/LocationSpinner2" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
