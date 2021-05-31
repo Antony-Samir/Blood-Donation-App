@@ -18,7 +18,7 @@ public class DonorDBHelper extends SQLiteOpenHelper {
     @Override
     public void onCreate(SQLiteDatabase db) {
         db.execSQL("create table donor(id integer primary key, " +
-                " name text not null, phone int, age integer, bloodType text, location text)");
+                " name text not null, gender text not null, phone int, age integer, bloodType text, location text)");
     }
 
     @Override
@@ -28,10 +28,11 @@ public class DonorDBHelper extends SQLiteOpenHelper {
         onCreate(db);
     }
 
-    public void createNewDonor(String name, int phone, int age, String bloodType, String location)
+    public void createNewDonor(String name, String gender, int phone, int age, String bloodType, String location)
     {
         ContentValues row = new ContentValues();
         row.put("name", name);
+        row.put("gender", gender);
         row.put("phone", phone);
         row.put("age", age);
         row.put("bloodType", bloodType);
@@ -44,7 +45,7 @@ public class DonorDBHelper extends SQLiteOpenHelper {
     public Cursor fetchAllDonors()
     {
         donorDatabase = getReadableDatabase();
-        String[] rowDetails = {"id", "name", "phone", "age", "bloodType", "location"};
+        String[] rowDetails = {"id", "name", "gender", "phone", "age", "bloodType", "location"};
         Cursor cursor = donorDatabase.query("donor", rowDetails, null, null, null, null, null);
         if (cursor != null)
             cursor.moveToFirst();
@@ -63,6 +64,16 @@ public class DonorDBHelper extends SQLiteOpenHelper {
         return cursor.getString(0);
     }
 
+    public String getDonorGender(String name)
+    {
+        donorDatabase = getReadableDatabase();
+        String[] arg = {name};
+
+        Cursor cursor = donorDatabase.rawQuery("Select gender from donor where name like ?", arg);
+        cursor.moveToFirst();
+        donorDatabase.close();
+        return cursor.getString(0);
+    }
 
     public void deleteDonor(String name)
     {

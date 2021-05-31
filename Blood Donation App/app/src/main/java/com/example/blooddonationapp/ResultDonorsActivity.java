@@ -42,8 +42,8 @@ public class ResultDonorsActivity extends AppCompatActivity {
         Cursor cursor = donorDB.fetchAllDonors();
         while (!cursor.isAfterLast())
         {
-            if(bloodTypeExtra.equals(cursor.getString(4)) &&
-                    locationExtra.equals(cursor.getString(5)))
+            if(bloodTypeExtra.equals(cursor.getString(5)) &&
+                    locationExtra.equals(cursor.getString(6)))
             {
                 viewAdapter.add(cursor.getString(1));
             }

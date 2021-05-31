@@ -10,7 +10,7 @@
         android:id="@+id/toolbar"
         android:layout_width="411dp"
         android:layout_height="56dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="1dp"
         android:layout_marginBottom="32dp"
         android:background="#0F439D"
         app:layout_constraintBottom_toTopOf="@+id/selectBloodTextView"
@@ -46,8 +46,8 @@
 
     <TextView
         android:id="@+id/selectBloodTextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="142dp"
+        android:layout_height="21dp"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="253dp"
         android:layout_marginBottom="16dp"
@@ -62,7 +62,7 @@
 
     <Spinner
         android:id="@+id/BloodTypeSpinner"
-        android:layout_width="0dp"
+        android:layout_width="409dp"
         android:layout_height="40dp"
         android:layout_marginBottom="50dp"
         android:entries="@array/bloodType"
@@ -73,8 +73,8 @@
 
     <TextView
         android:id="@+id/selectLocationTextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="0dp"
+        android:layout_height="21dp"
         android:layout_marginStart="17dp"
         android:layout_marginEnd="283dp"
         android:layout_marginBottom="22dp"
@@ -89,7 +89,7 @@
 
     <Spinner
         android:id="@+id/LocationSpinner"
-        android:layout_width="0dp"
+        android:layout_width="409dp"
         android:layout_height="40dp"
         android:layout_marginBottom="84dp"
         android:entries="@array/Location"
@@ -101,7 +101,7 @@
     <Button
         android:id="@+id/findDonorBtn"
         android:layout_width="114dp"
-        android:layout_height="wrap_content"
+        android:layout_height="56dp"
         android:layout_marginStart="150dp"
         android:layout_marginBottom="66dp"
         android:text="@string/find_donor"
@@ -113,8 +113,8 @@
 
     <Button
         android:id="@+id/beDonorBtn"
-        android:layout_width="120dp"
-        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
         android:layout_marginStart="150dp"
         android:layout_marginBottom="105dp"
         android:backgroundTint="@color/design_default_color_error"
@@ -126,30 +126,31 @@
 
     <Button
         android:id="@+id/infoBtn"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
         android:layout_marginStart="341dp"
         android:layout_marginEnd="20dp"
-        android:layout_marginBottom="20dp"
+        android:layout_marginBottom="32dp"
         android:background="@mipmap/info"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/beDonorBtn" />
 
     <Button
         android:id="@+id/fetchAllBtn"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="56dp"
         android:layout_marginStart="18dp"
         android:layout_marginTop="361dp"
         android:layout_marginEnd="235dp"
-        android:layout_marginBottom="18dp"
-        android:text="Fetch All Donors"
+        android:layout_marginBottom="32dp"
+        android:text="@string/fetch_all_donors"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/infoBtn"
         app:layout_constraintHorizontal_bias="0.013"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/LocationSpinner"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="1.0" />
 </androidx.constraintlayout.widget.ConstraintLayout>

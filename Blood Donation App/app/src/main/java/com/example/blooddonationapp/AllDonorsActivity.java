@@ -11,6 +11,7 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class AllDonorsActivity extends AppCompatActivity {
 
@@ -23,7 +24,7 @@ public class AllDonorsActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_all_donors);
 
-        viewAllList = (ListView)findViewById(R.id.testList);
+        viewAllList = (ListView)findViewById(R.id.AllDonorsList);
         viewAllAdapter = new ArrayAdapter<String>(getApplicationContext(), android.R.layout.simple_list_item_1);
         viewAllList.setAdapter(viewAllAdapter);
 
@@ -37,15 +38,22 @@ public class AllDonorsActivity extends AppCompatActivity {
             cursor.moveToNext();
         }
 
+        if (viewAllAdapter.isEmpty())
+        {
+            Toast.makeText(getApplicationContext(), "No Donors to Show", Toast.LENGTH_SHORT).show();
+        }
+
         viewAllList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 String phone = donorDB.getDonorPhone(((TextView) view).getText().toString()).toString();
                 //Toast.makeText(getApplicationContext(), phone, Toast.LENGTH_SHORT).show();
-                Uri number = Uri.parse("tel:" + phone);
-                Intent callIntent = new Intent(Intent.ACTION_DIAL, number);
-                startActivity(callIntent);
+                //Uri number = Uri.parse("tel:" + phone);
+                //Intent callIntent = new Intent(Intent.ACTION_DIAL, number);
+                //startActivity(callIntent);
 
+                String gender = donorDB.getDonorGender(((TextView) view).getText().toString()).toString();
+                Toast.makeText(getApplicationContext(), gender, Toast.LENGTH_SHORT).show();
             }
         });
     }

@@ -74,6 +74,20 @@
         app:layout_constraintStart_toStartOf="@+id/RegisterTitle"
         app:layout_constraintTop_toBottomOf="@+id/RegisterTitle" />
 
+    <TextView
+        android:id="@+id/GenderTxtView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="216dp"
+        android:layout_marginTop="47dp"
+        android:layout_marginEnd="95dp"
+        android:layout_marginBottom="15dp"
+        android:text="@string/gender"
+        app:layout_constraintBottom_toTopOf="@+id/GenderRadioGroup"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/NameTxtView"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+
     <EditText
         android:id="@+id/NameTxt"
         android:layout_width="wrap_content"
@@ -200,5 +214,34 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/LocationSpinner2" />
+
+    <RadioGroup
+        android:id="@+id/GenderRadioGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="38dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="35dp"
+        android:layout_marginBottom="261dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/BloodTypeSpinner2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/NameTxt"
+        app:layout_constraintTop_toBottomOf="@+id/GenderTxtView">
+
+        <RadioButton
+            android:id="@+id/MaleButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/m"
+            />
+
+        <RadioButton
+            android:id="@+id/FemaleButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/f"
+            />
+    </RadioGroup>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
