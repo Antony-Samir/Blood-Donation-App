@@ -9,9 +9,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.BloodDonationApp">
-        <activity android:name=".AllDonorsActivity"/>
-        <activity android:name=".LoginActivity" android:label="Login"/>
-        <activity android:name=".HospitalActivity" />
+        <activity android:name=".DonorHomeActivity"></activity>
+        <activity android:name=".AllDonorsActivity" />
+        <activity
+            android:name=".LoginActivity"
+            android:label="Login" />
+        <activity android:name=".HospitalHomeActivity" />
         <activity android:name=".ResultDonorsActivity" />
         <activity android:name=".InformationActivity" />
         <activity android:name=".RegisterAsDonorActivity" />

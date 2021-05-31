@@ -26,7 +26,7 @@ public class LoginActivity extends AppCompatActivity {
         hospital.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(LoginActivity.this, HospitalActivity.class);
+                Intent i = new Intent(LoginActivity.this, HospitalHomeActivity.class);
                 startActivity(i);
             }
         });
