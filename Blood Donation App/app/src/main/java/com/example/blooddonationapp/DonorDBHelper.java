@@ -19,7 +19,16 @@ public class DonorDBHelper extends SQLiteOpenHelper {
     @Override
     public void onCreate(SQLiteDatabase db) {
         db.execSQL("create table donor(id integer primary key, " +
-                " name text, gender text, phone integer, age integer, email text, location text, isDiabetic integer, isHighBloodPressure text, bloodType text)");
+                "name text," +
+                "gender text," +
+                "phone integer," +
+                "age integer," +
+                "email text," +
+                "location text," +
+                "isDiabetic integer," +
+                "isHighBloodPressure text," +
+                "bloodType text)"
+        );
     }
 
     @Override
@@ -65,12 +74,34 @@ public class DonorDBHelper extends SQLiteOpenHelper {
         return cursor;
     }
 
+    public String getDonorGender(String name)
+    {
+        donorDatabase = getReadableDatabase();
+        String[] arg = {name};
+
+        Cursor cursor = donorDatabase.rawQuery("Select gender from donor where name like ?", arg);
+        cursor.moveToFirst();
+        donorDatabase.close();
+        return cursor.getString(0);
+    }
+
     public String getDonorPhone(String name)
     {
         donorDatabase = getReadableDatabase();
         String[] arg = {name};
 
         Cursor cursor = donorDatabase.rawQuery("Select phone from donor where name like ?", arg);
+        cursor.moveToFirst();
+        donorDatabase.close();
+        return cursor.getString(0);
+    }
+
+    public String getDonorAge(String name)
+    {
+        donorDatabase = getReadableDatabase();
+        String[] arg = {name};
+
+        Cursor cursor = donorDatabase.rawQuery("Select age from donor where name like ?", arg);
         cursor.moveToFirst();
         donorDatabase.close();
         return cursor.getString(0);
@@ -87,7 +118,29 @@ public class DonorDBHelper extends SQLiteOpenHelper {
         return cursor.getString(0);
     }
 
-    public String getDonorHealth(String name)
+    public String getDonorLocation(String name)
+    {
+        donorDatabase = getReadableDatabase();
+        String[] arg = {name};
+
+        Cursor cursor = donorDatabase.rawQuery("Select location from donor where name like ?", arg);
+        cursor.moveToFirst();
+        donorDatabase.close();
+        return cursor.getString(0);
+    }
+
+    public String getDonorIsDiabetic(String name)
+    {
+        donorDatabase = getReadableDatabase();
+        String[] arg = {name};
+
+        Cursor cursor = donorDatabase.rawQuery("Select isDiabetic from donor where name like ?", arg);
+        cursor.moveToFirst();
+        donorDatabase.close();
+        return cursor.getString(0);
+    }
+
+    public String getDonorIsHighBloodPressure(String name)
     {
         donorDatabase = getReadableDatabase();
         String[] arg = {name};
@@ -98,12 +151,12 @@ public class DonorDBHelper extends SQLiteOpenHelper {
         return cursor.getString(0);
     }
 
-    public String getDonorGender(String name)
+    public String getDonorBloodType(String name)
     {
         donorDatabase = getReadableDatabase();
         String[] arg = {name};
 
-        Cursor cursor = donorDatabase.rawQuery("Select gender from donor where name like ?", arg);
+        Cursor cursor = donorDatabase.rawQuery("Select bloodType from donor where name like ?", arg);
         cursor.moveToFirst();
         donorDatabase.close();
         return cursor.getString(0);
@@ -115,7 +168,5 @@ public class DonorDBHelper extends SQLiteOpenHelper {
         donorDatabase.delete("donor", "name='" + name + "'", null);
         donorDatabase.close();
     }
-
-
 
 }

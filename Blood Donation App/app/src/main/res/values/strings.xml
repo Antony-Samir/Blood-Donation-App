@@ -36,6 +36,11 @@
     <string name="do_you_have_high_blood_pressure">Do you have high blood pressure?</string>
     <string name="new_donor">New Donor?</string>
     <string name="send_email_to_all">Send Email to ALL</string>
+    <string name="dot">.</string>
+    <string name="location">Location</string>
+    <string name="is_high_blood_pressure">Is High Blood Pressure?</string>
+    <string name="is_diabetic">Is Diabetic?</string>
+    <string name="all_donors">All Donors</string>
 
     <string-array name="bloodType">
         <item>AB+</item>
@@ -50,21 +55,18 @@
 
     <string-array name="Location">
         <item>Nasr City</item>
-        <item>New Cairo</item>
         <item>Tgamou3</item>
         <item>Re7ab</item>
         <item>Korba</item>
+        <item>New Cairo</item>
         <item>3absya</item>
         <item>Ramsis</item>
         <item>Ta7rer</item>
         <item>Mosky</item>
-        <item>Sadya Zienb</item>
-        <item>Sayeda 3aysha</item>
         <item>Old Cairo</item>
         <item>7elwan</item>
         <item>Waily</item>
         <item>El Nozha</item>
-        <item>El Nozha El Gdeda</item>
     </string-array>
 
 

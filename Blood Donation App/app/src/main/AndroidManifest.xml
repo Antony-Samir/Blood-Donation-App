@@ -11,10 +11,7 @@
         android:theme="@style/Theme.BloodDonationApp">
         <activity
             android:name=".RegisterDonorHealthActivity"
-            android:label="Health Information"/>
-        <activity
-            android:name=".DonorHomeActivity"
-            android:label="Home" />
+            android:label="Register Health Information"/>
         <activity
             android:name=".AllDonorsActivity"
             android:label="All Donors" />
@@ -23,16 +20,16 @@
             android:label="Login" />
         <activity
             android:name=".HospitalHomeActivity"
-            android:label="Home" />
+            android:label="Find Donors" />
         <activity
             android:name=".ResultDonorsActivity"
-            android:label="Results" />
+            android:label="Search Results" />
         <activity
             android:name=".InformationActivity"
             android:label="More Info" />
         <activity
             android:name=".RegisterDonorInfoActivity"
-            android:label="Registration" />
+            android:label="Register Personal Information" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

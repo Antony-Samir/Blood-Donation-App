@@ -39,9 +39,9 @@ public class InformationActivity extends AppCompatActivity {
         TextView location = (TextView)findViewById(R.id.locationTxtView);
         location.setOnClickListener(v -> {
 
-            Uri webpage = Uri.parse("geo:30.078725483762756, 31.288135123930722");
-            Intent webIntent = new Intent(Intent.ACTION_VIEW, webpage);
-            startActivity(webIntent);
+            Uri geo = Uri.parse("geo:30.078725483762756, 31.288135123930722");
+            Intent geoIntent = new Intent(Intent.ACTION_VIEW, geo);
+            startActivity(geoIntent);
         });
 
         //Send Mail

@@ -24,6 +24,16 @@ public class AllDonorsActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_all_donors);
 
+        final TextView genderResult = (TextView)findViewById(R.id.GenderResultTxt);
+        final TextView phoneResult = (TextView)findViewById(R.id.PhoneResultTxt);
+        final TextView ageResult = (TextView)findViewById(R.id.AgeResultTxt);
+        final TextView emailResult = (TextView)findViewById(R.id.EmailResultTxt);
+        final TextView locationResult = (TextView)findViewById(R.id.LocationResultTxt);
+        final TextView diabeticResult = (TextView)findViewById(R.id.DiabeticResultTxt);
+        final TextView highBloodPressureResult = (TextView)findViewById(R.id.BloodPressureResultTxt);
+        final TextView bloodTypeResult = (TextView)findViewById(R.id.BloodTypeResultTxt);
+
+
         viewAllList = (ListView)findViewById(R.id.AllDonorsList);
         viewAllAdapter = new ArrayAdapter<String>(getApplicationContext(), android.R.layout.simple_list_item_1);
         viewAllList.setAdapter(viewAllAdapter);
@@ -46,18 +56,19 @@ public class AllDonorsActivity extends AppCompatActivity {
         viewAllList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                String email = donorDB.getDonorEmail(((TextView) view).getText().toString());
-                Toast.makeText(getApplicationContext(), email, Toast.LENGTH_SHORT).show();
 
-                /*Uri number = Uri.parse("tel:" + phone);
-                Intent callIntent = new Intent(Intent.ACTION_DIAL, number);
-                startActivity(callIntent);*/
+                Toast.makeText(getApplicationContext(), ((TextView) view).getText().toString() + "'s Data", Toast.LENGTH_SHORT).show();
 
-                //String health = donorDB.getDonorHealth(((TextView) view).getText().toString());
-                //Toast.makeText(getApplicationContext(), health, Toast.LENGTH_SHORT).show();
 
-                //String gender = donorDB.getDonorGender(((TextView) view).getText().toString());
-                //Toast.makeText(getApplicationContext(), gender, Toast.LENGTH_SHORT).show();
+                genderResult.setText(donorDB.getDonorGender(((TextView) view).getText().toString()));
+                phoneResult.setText(donorDB.getDonorPhone(((TextView) view).getText().toString()));
+                ageResult.setText(donorDB.getDonorAge(((TextView) view).getText().toString()));
+                emailResult.setText(donorDB.getDonorEmail(((TextView) view).getText().toString()));
+                locationResult.setText(donorDB.getDonorLocation(((TextView) view).getText().toString()));
+                diabeticResult.setText(donorDB.getDonorIsDiabetic(((TextView) view).getText().toString()));
+                highBloodPressureResult.setText(donorDB.getDonorIsHighBloodPressure(((TextView) view).getText().toString()));
+                bloodTypeResult.setText(donorDB.getDonorBloodType(((TextView) view).getText().toString()));
+
             }
         });
     }

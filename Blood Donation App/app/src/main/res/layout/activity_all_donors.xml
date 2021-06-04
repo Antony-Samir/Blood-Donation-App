@@ -9,11 +9,11 @@
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
         android:layout_width="411dp"
-        android:layout_height="56dp"
-        android:layout_marginTop="3dp"
-        android:layout_marginBottom="16dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginBottom="94dp"
         android:background="#0F439D"
-        app:layout_constraintBottom_toTopOf="@+id/resultTitle"
+        app:layout_constraintBottom_toTopOf="@+id/GenderResultTxt"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -22,10 +22,12 @@
             android:id="@+id/Background"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="All Donors"
             android:textColor="#D61010"
             android:textSize="20sp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            android:text="@string/all_donors"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="14dp" />
 
         <TextView
             android:id="@+id/textView2"
@@ -48,28 +50,186 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="253dp"
-        android:layout_marginBottom="32dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="266dp"
+        android:layout_marginBottom="8dp"
         android:text="@string/select_your_donor"
         android:textAlignment="center"
         android:textSize="16sp"
         android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/AllDonorsList"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/toolbar" />
 
     <ListView
         android:id="@+id/AllDonorsList"
-        android:layout_width="409dp"
-        android:layout_height="618dp"
+        android:layout_width="0dp"
+        android:layout_height="602dp"
         android:layout_marginStart="1dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="1dp"
-        android:layout_marginBottom="2dp"
+        android:layout_marginTop="31dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="1dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/BloodTypeTextView"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/resultTitle" />
+
+    <TextView
+        android:id="@+id/GenderTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/gender"
+        app:layout_constraintBottom_toBottomOf="@+id/GenderResultTxt"
+        app:layout_constraintStart_toStartOf="@+id/PhoneTextView"
+        app:layout_constraintTop_toTopOf="@+id/GenderResultTxt" />
+
+    <TextView
+        android:id="@+id/GenderResultTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="52dp"
+        android:text="@string/dot"
+        app:layout_constraintBottom_toTopOf="@+id/PhoneResultTxt"
+        app:layout_constraintEnd_toEndOf="@+id/PhoneResultTxt"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+
+    <TextView
+        android:id="@+id/PhoneTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/phone"
+        app:layout_constraintBottom_toBottomOf="@+id/PhoneResultTxt"
+        app:layout_constraintStart_toStartOf="@+id/AgeTextView"
+        app:layout_constraintTop_toTopOf="@+id/PhoneResultTxt" />
+
+    <TextView
+        android:id="@+id/PhoneResultTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="52dp"
+        android:text="@string/dot"
+        app:layout_constraintBottom_toTopOf="@+id/AgeResultTxt"
+        app:layout_constraintEnd_toEndOf="@+id/AgeResultTxt"
+        app:layout_constraintTop_toBottomOf="@+id/GenderResultTxt" />
+
+    <TextView
+        android:id="@+id/AgeTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/age"
+        app:layout_constraintBottom_toBottomOf="@+id/AgeResultTxt"
+        app:layout_constraintStart_toStartOf="@+id/EmailTextView"
+        app:layout_constraintTop_toTopOf="@+id/AgeResultTxt" />
+
+    <TextView
+        android:id="@+id/AgeResultTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="52dp"
+        android:text="@string/dot"
+        app:layout_constraintBottom_toTopOf="@+id/EmailResultTxt"
+        app:layout_constraintEnd_toEndOf="@+id/EmailResultTxt"
+        app:layout_constraintTop_toBottomOf="@+id/PhoneResultTxt" />
+
+    <TextView
+        android:id="@+id/EmailTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/email"
+        app:layout_constraintBottom_toBottomOf="@+id/EmailResultTxt"
+        app:layout_constraintStart_toStartOf="@+id/LocationTextView"
+        app:layout_constraintTop_toTopOf="@+id/EmailResultTxt" />
+
+    <TextView
+        android:id="@+id/EmailResultTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="50dp"
+        android:text="@string/dot"
+        app:layout_constraintBottom_toTopOf="@+id/LocationResultTxt"
+        app:layout_constraintEnd_toEndOf="@+id/LocationResultTxt"
+        app:layout_constraintTop_toBottomOf="@+id/AgeResultTxt" />
+
+    <TextView
+        android:id="@+id/LocationTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/location"
+        app:layout_constraintBottom_toBottomOf="@+id/LocationResultTxt"
+        app:layout_constraintStart_toStartOf="@+id/DiabeticTextView"
+        app:layout_constraintTop_toTopOf="@+id/LocationResultTxt" />
+
+    <TextView
+        android:id="@+id/LocationResultTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="52dp"
+        android:text="@string/dot"
+        app:layout_constraintBottom_toTopOf="@+id/DiabeticResultTxt"
+        app:layout_constraintEnd_toEndOf="@+id/DiabeticResultTxt"
+        app:layout_constraintTop_toBottomOf="@+id/EmailResultTxt" />
+
+    <TextView
+        android:id="@+id/DiabeticTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/is_diabetic"
+        app:layout_constraintBottom_toBottomOf="@+id/DiabeticResultTxt"
+        app:layout_constraintStart_toStartOf="@+id/BloodPressureTextView"
+        app:layout_constraintTop_toTopOf="@+id/DiabeticResultTxt" />
+
+    <TextView
+        android:id="@+id/DiabeticResultTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="54dp"
+        android:text="@string/dot"
+        app:layout_constraintBottom_toTopOf="@+id/BloodPressureTextView"
+        app:layout_constraintEnd_toEndOf="@+id/BloodPressureResultTxt"
+        app:layout_constraintTop_toBottomOf="@+id/LocationResultTxt" />
+
+    <TextView
+        android:id="@+id/BloodPressureTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="31dp"
+        android:text="@string/is_high_blood_pressure"
+        app:layout_constraintBottom_toTopOf="@+id/BloodPressureResultTxt"
+        app:layout_constraintStart_toStartOf="@+id/BloodTypeTextView"
+        app:layout_constraintTop_toBottomOf="@+id/DiabeticResultTxt" />
+
+    <TextView
+        android:id="@+id/BloodPressureResultTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
+        android:text="@string/dot"
+        app:layout_constraintBottom_toTopOf="@+id/BloodTypeTextView"
+        app:layout_constraintEnd_toEndOf="@+id/BloodTypeResultTxt"
+        app:layout_constraintTop_toBottomOf="@+id/BloodPressureTextView" />
+
+    <TextView
+        android:id="@+id/BloodTypeTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="46dp"
+        android:layout_marginBottom="53dp"
+        android:text="@string/blood_type"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/BloodTypeResultTxt"
+        app:layout_constraintStart_toEndOf="@+id/AllDonorsList"
+        app:layout_constraintTop_toBottomOf="@+id/BloodPressureResultTxt" />
+
+    <TextView
+        android:id="@+id/BloodTypeResultTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="69dp"
+        android:text="@string/dot"
+        app:layout_constraintBottom_toBottomOf="@+id/BloodTypeTextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/BloodTypeTextView"
+        app:layout_constraintTop_toTopOf="@+id/BloodTypeTextView" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
