@@ -46,13 +46,16 @@ public class AllDonorsActivity extends AppCompatActivity {
         viewAllList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                String phone = donorDB.getDonorPhone(((TextView) view).getText().toString());
-                //Toast.makeText(getApplicationContext(), phone, Toast.LENGTH_SHORT).show();
+                String email = donorDB.getDonorEmail(((TextView) view).getText().toString());
+                Toast.makeText(getApplicationContext(), email, Toast.LENGTH_SHORT).show();
+
                 /*Uri number = Uri.parse("tel:" + phone);
                 Intent callIntent = new Intent(Intent.ACTION_DIAL, number);
                 startActivity(callIntent);*/
-                String health = donorDB.getDonorHealth(((TextView) view).getText().toString());
-                Toast.makeText(getApplicationContext(), health, Toast.LENGTH_SHORT).show();
+
+                //String health = donorDB.getDonorHealth(((TextView) view).getText().toString());
+                //Toast.makeText(getApplicationContext(), health, Toast.LENGTH_SHORT).show();
+
                 //String gender = donorDB.getDonorGender(((TextView) view).getText().toString());
                 //Toast.makeText(getApplicationContext(), gender, Toast.LENGTH_SHORT).show();
             }

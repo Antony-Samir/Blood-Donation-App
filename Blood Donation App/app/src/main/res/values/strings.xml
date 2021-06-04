@@ -35,6 +35,7 @@
     <string name="are_you_diabetic">Are you Diabetic?</string>
     <string name="do_you_have_high_blood_pressure">Do you have high blood pressure?</string>
     <string name="new_donor">New Donor?</string>
+    <string name="send_email_to_all">Send Email to ALL</string>
 
     <string-array name="bloodType">
         <item>AB+</item>

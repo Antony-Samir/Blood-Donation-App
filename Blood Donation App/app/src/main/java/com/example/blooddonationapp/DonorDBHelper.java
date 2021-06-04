@@ -43,26 +43,6 @@ public class DonorDBHelper extends SQLiteOpenHelper {
         donorDatabase.close();
     }
 
-    public int uppppNewDonor(String name, String gender,  String email, String location, String isDiabetic, String isHighBloodPressure, String bloodType)
-    {
-        ContentValues row = new ContentValues();
-        row.put("name", name);
-        row.put("gender", gender);
-        //row.put("phone", phone);
-        //row.put("age", age);
-        row.put("email", email);
-        row.put("location", location);
-
-        row.put("isDiabetic", isDiabetic);
-        row.put("isHighBloodPressure", isHighBloodPressure);
-        row.put("bloodType", bloodType);
-
-        donorDatabase = getWritableDatabase();
-        donorDatabase.update("donor", row, "name like?", new String[]{name});
-        donorDatabase.close();
-        return 50;
-    }
-
     public void updateDonorHealth(String oldName, String isDiabetic, String isHighBloodPressure, String bloodType)
     {
         donorDatabase = getWritableDatabase();
@@ -96,6 +76,17 @@ public class DonorDBHelper extends SQLiteOpenHelper {
         return cursor.getString(0);
     }
 
+    public String getDonorEmail(String name)
+    {
+        donorDatabase = getReadableDatabase();
+        String[] arg = {name};
+
+        Cursor cursor = donorDatabase.rawQuery("Select email from donor where name like ?", arg);
+        cursor.moveToFirst();
+        donorDatabase.close();
+        return cursor.getString(0);
+    }
+
     public String getDonorHealth(String name)
     {
         donorDatabase = getReadableDatabase();
@@ -106,7 +97,6 @@ public class DonorDBHelper extends SQLiteOpenHelper {
         donorDatabase.close();
         return cursor.getString(0);
     }
-
 
     public String getDonorGender(String name)
     {
