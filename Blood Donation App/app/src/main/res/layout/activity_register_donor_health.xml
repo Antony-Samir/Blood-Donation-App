@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RegisterDonorHealthActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginBottom="40dp"
+        android:background="#0F439D"
+        app:layout_constraintBottom_toTopOf="@+id/isDiabeticTxtView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/Background"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/be_a_donor"
+            android:textColor="#D61010"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="9dp" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="21dp"
+            android:layout_marginEnd="104dp"
+            android:background="@mipmap/blood_drop"
+            app:layout_constraintBottom_toBottomOf="@+id/textView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/textView"
+            app:layout_constraintTop_toTopOf="@+id/textView"
+            app:layout_constraintVertical_bias="1.0" />
+
+    </androidx.appcompat.widget.Toolbar>
+
+
+    <TextView
+        android:id="@+id/isDiabeticTxtView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginBottom="61dp"
+        android:text="@string/are_you_diabetic"
+        app:layout_constraintBottom_toTopOf="@+id/diabeticRadioGroup"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+
+    <RadioGroup
+        android:id="@+id/diabeticRadioGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="42dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/isHighBloodPressureTxtView"
+        app:layout_constraintEnd_toEndOf="@+id/isDiabeticTxtView"
+        app:layout_constraintStart_toStartOf="@+id/bloodPressureRadioGroup"
+        app:layout_constraintTop_toBottomOf="@+id/isDiabeticTxtView">
+
+        <RadioButton
+            android:id="@+id/isDiabetic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/y" />
+
+        <RadioButton
+            android:id="@+id/isNotDiabetic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/n" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/isHighBloodPressureTxtView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginBottom="36dp"
+        android:text="@string/do_you_have_high_blood_pressure"
+        app:layout_constraintBottom_toTopOf="@+id/bloodPressureRadioGroup"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/diabeticRadioGroup" />
+
+    <RadioGroup
+        android:id="@+id/bloodPressureRadioGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="44dp"
+        android:layout_marginBottom="64dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/bloodTypeTxtView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/isHighBloodPressureTxtView">
+
+        <RadioButton
+            android:id="@+id/isHighBloodPressure"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/y" />
+
+        <RadioButton
+            android:id="@+id/isNotHighBloodPressure"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/n" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/bloodTypeTxtView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:layout_marginBottom="40dp"
+        android:text="@string/blood_type"
+        app:layout_constraintBottom_toTopOf="@+id/BloodTypeSpinner2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bloodPressureRadioGroup" />
+
+    <Spinner
+        android:id="@+id/BloodTypeSpinner2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="66dp"
+        android:entries="@array/bloodType"
+        app:layout_constraintBottom_toTopOf="@+id/submitBtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bloodTypeTxtView" />
+
+    <Button
+        android:id="@+id/submitBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="80dp"
+        android:text="@string/submit"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/BloodTypeSpinner2" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

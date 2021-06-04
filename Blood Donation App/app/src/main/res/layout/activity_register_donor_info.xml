@@ -4,14 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".RegisterAsDonorActivity">
+    tools:context=".RegisterDonorInfoActivity">
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginTop="1dp"
-        android:layout_marginBottom="13dp"
+        android:layout_marginBottom="14dp"
         android:background="#0F439D"
         app:layout_constraintBottom_toTopOf="@+id/RegisterTitle"
         app:layout_constraintEnd_toEndOf="parent"
@@ -50,27 +50,27 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
+        android:layout_marginTop="59dp"
         android:layout_marginEnd="223dp"
         android:layout_marginBottom="13dp"
         android:text="@string/please_fill_up_your_data"
         android:textAlignment="center"
         android:textSize="16sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/NameTxtView"
+        app:layout_constraintBottom_toTopOf="@+id/isDiabeticTxtView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/NameTxtView"
+        android:id="@+id/isDiabeticTxtView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:layout_marginEnd="349dp"
-        android:layout_marginBottom="15dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="214dp"
         android:text="@string/name"
-        app:layout_constraintBottom_toTopOf="@+id/NameTxt"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/GenderTxtView"
         app:layout_constraintStart_toStartOf="@+id/RegisterTitle"
         app:layout_constraintTop_toBottomOf="@+id/RegisterTitle" />
 
@@ -78,170 +78,170 @@
         android:id="@+id/GenderTxtView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="216dp"
+        android:layout_marginStart="34dp"
         android:layout_marginTop="47dp"
-        android:layout_marginEnd="95dp"
-        android:layout_marginBottom="15dp"
+        android:layout_marginEnd="90dp"
+        android:layout_marginBottom="17dp"
         android:text="@string/gender"
         app:layout_constraintBottom_toTopOf="@+id/GenderRadioGroup"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/NameTxtView"
+        app:layout_constraintStart_toEndOf="@+id/NameTxt"
         app:layout_constraintTop_toBottomOf="@+id/toolbar" />
 
     <EditText
         android:id="@+id/NameTxt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="3dp"
-        android:layout_marginEnd="170dp"
-        android:layout_marginBottom="15dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="39dp"
+        android:layout_marginBottom="16dp"
         android:ems="10"
         android:importantForAutofill="no"
         android:inputType="textPersonName"
         app:layout_constraintBottom_toTopOf="@+id/PhoneTxtView"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/NameTxtView"
-        app:layout_constraintTop_toBottomOf="@+id/NameTxtView" />
+        app:layout_constraintEnd_toStartOf="@+id/GenderRadioGroup"
+        app:layout_constraintStart_toStartOf="@+id/isDiabeticTxtView"
+        app:layout_constraintTop_toBottomOf="@+id/isDiabeticTxtView" />
+
+    <RadioGroup
+        android:id="@+id/GenderRadioGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="1dp"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="@+id/GenderTxtView"
+        app:layout_constraintTop_toTopOf="@+id/NameTxt">
+
+        <RadioButton
+            android:id="@+id/MaleButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/m" />
+
+        <RadioButton
+            android:id="@+id/FemaleButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/f" />
+    </RadioGroup>
 
     <TextView
         android:id="@+id/PhoneTxtView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="342dp"
-        android:layout_marginBottom="15dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="346dp"
+        android:layout_marginBottom="14dp"
         android:text="@string/phone"
         app:layout_constraintBottom_toTopOf="@+id/PhoneTxt"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/NameTxt"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/NameTxt" />
 
     <EditText
         android:id="@+id/PhoneTxt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="13dp"
         android:layout_marginEnd="169dp"
         android:layout_marginBottom="12dp"
         android:ems="10"
+        android:importantForAutofill="no"
         android:inputType="phone"
         app:layout_constraintBottom_toTopOf="@+id/AgeTxtView"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/PhoneTxtView"
-        app:layout_constraintTop_toBottomOf="@+id/PhoneTxtView"
-        android:importantForAutofill="no" />
+        app:layout_constraintStart_toStartOf="@+id/AgeTxtView"
+        app:layout_constraintTop_toBottomOf="@+id/PhoneTxtView" />
 
     <TextView
         android:id="@+id/AgeTxtView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="341dp"
-        android:layout_marginBottom="14dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="289dp"
+        android:layout_marginEnd="362dp"
+        android:layout_marginBottom="17dp"
         android:text="@string/age"
         app:layout_constraintBottom_toTopOf="@+id/AgeTxt"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/PhoneTxt"
-        app:layout_constraintTop_toBottomOf="@+id/PhoneTxt" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/AgeTxt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="17dp"
         android:layout_marginEnd="169dp"
-        android:layout_marginBottom="27dp"
         android:ems="10"
+        android:importantForAutofill="no"
         android:inputType="numberSigned"
-        app:layout_constraintBottom_toTopOf="@+id/BloodTxtView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@+id/AgeTxtView"
-        app:layout_constraintTop_toBottomOf="@+id/AgeTxtView"
-        android:importantForAutofill="no" />
+        app:layout_constraintTop_toBottomOf="@+id/AgeTxtView" />
 
     <TextView
-        android:id="@+id/BloodTxtView"
+        android:id="@+id/bloodTypeTxtView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
-        android:layout_marginEnd="316dp"
-        android:layout_marginBottom="18dp"
-        android:text="@string/blood_type"
-        app:layout_constraintBottom_toTopOf="@+id/BloodTypeSpinner2"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="25dp"
+        android:text="@string/email"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/AgeTxt" />
 
-    <Spinner
-        android:id="@+id/BloodTypeSpinner2"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginBottom="23dp"
-        android:entries="@array/bloodType"
-        app:layout_constraintBottom_toTopOf="@+id/LocationTxtView"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/BloodTxtView" />
+    <EditText
+        android:id="@+id/emailTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="17dp"
+        android:ems="10"
+        android:importantForAutofill="no"
+        android:inputType="textWebEmailAddress|textEmailAddress"
+        app:layout_constraintStart_toStartOf="@+id/bloodTypeTxtView"
+        app:layout_constraintTop_toBottomOf="@+id/bloodTypeTxtView" />
 
     <TextView
         android:id="@+id/LocationTxtView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="27dp"
-        android:layout_marginEnd="313dp"
-        android:layout_marginBottom="22dp"
+        android:layout_marginTop="18dp"
         android:text="@string/your_location"
-        app:layout_constraintBottom_toTopOf="@+id/LocationSpinner2"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/BloodTypeSpinner2" />
+        app:layout_constraintTop_toBottomOf="@+id/emailTxt" />
 
     <Spinner
         android:id="@+id/LocationSpinner2"
         android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_height="44dp"
+        android:layout_marginTop="41dp"
         android:layout_marginBottom="42dp"
         android:entries="@array/Location"
-        app:layout_constraintBottom_toTopOf="@+id/SubmitBtn"
+        app:layout_constraintBottom_toTopOf="@+id/submitBtn"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/LocationTxtView" />
+        app:layout_constraintTop_toTopOf="@+id/LocationTxtView"
+        app:layout_constraintVertical_bias="0.0" />
 
     <Button
-        android:id="@+id/SubmitBtn"
+        android:id="@+id/submitBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="52dp"
-        android:text="@string/submit"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        android:text="@string/next"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/LocationSpinner2" />
-
-    <RadioGroup
-        android:id="@+id/GenderRadioGroup"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="38dp"
-        android:layout_marginTop="2dp"
-        android:layout_marginEnd="35dp"
-        android:layout_marginBottom="261dp"
-        android:orientation="horizontal"
-        app:layout_constraintBottom_toTopOf="@+id/BloodTypeSpinner2"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/NameTxt"
-        app:layout_constraintTop_toBottomOf="@+id/GenderTxtView">
-
-        <RadioButton
-            android:id="@+id/MaleButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/m"
-            />
-
-        <RadioButton
-            android:id="@+id/FemaleButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/f"
-            />
-    </RadioGroup>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

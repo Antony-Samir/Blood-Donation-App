@@ -10,28 +10,30 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.BloodDonationApp">
         <activity
+            android:name=".RegisterDonorHealthActivity"
+            android:label="Health Information"/>
+        <activity
             android:name=".DonorHomeActivity"
-            android:label="Home"/>
+            android:label="Home" />
         <activity
             android:name=".AllDonorsActivity"
-            android:label="All Donors"/>
+            android:label="All Donors" />
         <activity
             android:name=".LoginActivity"
-            android:label="Login"/>
+            android:label="Login" />
         <activity
             android:name=".HospitalHomeActivity"
-            android:label="Home"/>
+            android:label="Home" />
         <activity
             android:name=".ResultDonorsActivity"
-            android:label="Results"/>
+            android:label="Results" />
         <activity
             android:name=".InformationActivity"
-            android:label="More Info"/>
+            android:label="More Info" />
         <activity
-            android:name=".RegisterAsDonorActivity"
-            android:label="Registration"/>
+            android:name=".RegisterDonorInfoActivity"
+            android:label="Registration" />
         <activity android:name=".MainActivity">
-
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

@@ -48,7 +48,7 @@ public class HospitalHomeActivity extends AppCompatActivity {
         beDonor.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(HospitalHomeActivity.this, RegisterAsDonorActivity.class);
+                Intent i = new Intent(HospitalHomeActivity.this, RegisterDonorInfoActivity.class);
                 startActivity(i);
             }
         });

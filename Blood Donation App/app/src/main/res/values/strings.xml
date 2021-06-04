@@ -29,6 +29,12 @@
     <string name="m">M</string>
     <string name="f">F</string>
     <string name="gender">Gender</string>
+    <string name="email">Email</string>
+    <string name="next">Next</string>
+    <string name="y">Y</string>
+    <string name="n">N</string>
+    <string name="are_you_diabetic">Are you Diabetic?</string>
+    <string name="do_you_have_high_blood_pressure">Do you have high blood pressure?</string>
 
     <string-array name="bloodType">
         <item>AB+</item>
