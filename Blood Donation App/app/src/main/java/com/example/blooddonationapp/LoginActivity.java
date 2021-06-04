@@ -7,7 +7,9 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class LoginActivity extends AppCompatActivity {
 
@@ -16,21 +18,25 @@ public class LoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-        Button hospital = (Button)findViewById(R.id.HospitalBtn);
-        hospital.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent i = new Intent(LoginActivity.this, HospitalHomeActivity.class);
-                startActivity(i);
-            }
-        });
+
+        EditText userName = (EditText)findViewById(R.id.UsernameTxt);
+        EditText password = (EditText)findViewById(R.id.PasswordTxt);
+
 
         Button login = (Button)findViewById(R.id.LoginBtn);
         login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(LoginActivity.this, DonorHomeActivity.class);
-                startActivity(i);
+                if (userName.getText().toString().equals("Hospital") && password.getText().toString().equals("123")) {
+                    Intent i = new Intent(LoginActivity.this, HospitalHomeActivity.class);
+                    startActivity(i);
+                    userName.getText().clear();
+                    password.getText().clear();
+                }
+                else
+                {
+                    Toast.makeText(getApplicationContext(), "Username or Password is wrong", Toast.LENGTH_SHORT).show();
+                }
             }
         });
 

@@ -24,7 +24,6 @@
     <string name="password">Password:</string>
     <string name="username">Username:</string>
     <string name="hospital">Hospital</string>
-    <string name="new_account">New Account?</string>
     <string name="fetch_all_donors">Fetch All Donors</string>
     <string name="m">M</string>
     <string name="f">F</string>
@@ -35,6 +34,7 @@
     <string name="n">N</string>
     <string name="are_you_diabetic">Are you Diabetic?</string>
     <string name="do_you_have_high_blood_pressure">Do you have high blood pressure?</string>
+    <string name="new_donor">New Donor?</string>
 
     <string-array name="bloodType">
         <item>AB+</item>
