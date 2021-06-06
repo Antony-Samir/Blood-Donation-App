@@ -3,6 +3,7 @@ package com.example.blooddonationapp;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.database.Cursor;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.EditText;
@@ -27,21 +28,26 @@ public class LoginActivity extends AppCompatActivity {
 
         Button login = (Button)findViewById(R.id.LoginBtn);
         login.setOnClickListener(v -> {
-            if (userName.getText().toString().equals(HospitalDB.getHospitalEmail("Ain Shams Uni")) && password.getText().toString().equals(HospitalDB.getHospitalPassword("Ain Shams Uni")))
-            {//Check for the hospital account
 
-                //Correct Email: "test@gmail.com"
-                //Correct Password: 123
-                Intent i = new Intent(LoginActivity.this, HospitalHomeActivity.class);
-                startActivity(i);
-                userName.getText().clear();
-                password.getText().clear();
-            }
-            else
+            Cursor cursor = HospitalDB.fetchAllHospitals();
+            while (!cursor.isAfterLast())
             {
 
-                Toast.makeText(getApplicationContext(), "Username or Password is wrong", Toast.LENGTH_SHORT).show();
+                if (userName.getText().toString().equals(cursor.getString(3)) && password.getText().toString().equals(cursor.getString(4)))
+                {//Check for the hospital account
+
+                    //1st Account Email: "test@gmail.com"
+                    //1st Account Password: 123
+                    Intent i = new Intent(LoginActivity.this, HospitalHomeActivity.class);
+                    startActivity(i);
+                    userName.getText().clear();
+                    password.getText().clear();
+                    Toast.makeText(getApplicationContext(), "Login Successfully!", Toast.LENGTH_SHORT).show();
+                    return;
+                }
+                cursor.moveToNext();
             }
+                Toast.makeText(getApplicationContext(), "Username or Password is wrong", Toast.LENGTH_SHORT).show();
         });
 
         TextView newDonorAccount = (TextView)findViewById(R.id.NewDonorAccountBtn);

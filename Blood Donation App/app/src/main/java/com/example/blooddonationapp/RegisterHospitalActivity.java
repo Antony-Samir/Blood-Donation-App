@@ -41,6 +41,12 @@ public class RegisterHospitalActivity extends AppCompatActivity {
                         hospitalLocation.getSelectedItem().toString()
                 );
 
+                //Toast.makeText(getApplicationContext(), hospitalName.getText().toString(), Toast.LENGTH_SHORT).show();
+                //Toast.makeText(getApplicationContext(), hospitalPhone.getText().toString(), Toast.LENGTH_SHORT).show();
+                //Toast.makeText(getApplicationContext(), hospitalEmail.getText().toString(), Toast.LENGTH_SHORT).show();
+                //Toast.makeText(getApplicationContext(), hospitalPassword.getText().toString(), Toast.LENGTH_SHORT).show();
+                //Toast.makeText(getApplicationContext(), hospitalLocation.getSelectedItem().toString(), Toast.LENGTH_SHORT).show();
+
                 Toast.makeText(getApplicationContext(), "Registration Completed Successfully!", Toast.LENGTH_SHORT).show();
                 Intent i = new Intent(RegisterHospitalActivity.this, LoginActivity.class);
                 startActivity(i);
