@@ -23,6 +23,7 @@ public class HospitalDBHelper extends SQLiteOpenHelper
                 "name text," +
                 "phone integer," +
                 "email text," +
+                "password text," +
                 "location text)"
         );
     }
@@ -34,12 +35,13 @@ public class HospitalDBHelper extends SQLiteOpenHelper
         onCreate(db);
     }
 
-    public void createNewHospital(String name, int phone, String email, String location)
+    public void createNewHospital(String name, int phone, String email, String password, String location)
     {
         ContentValues row = new ContentValues();
         row.put("name", name);
         row.put("phone", phone);
         row.put("email", email);
+        row.put("password", password);
         row.put("location", location);
         hospitalDatabase = getWritableDatabase();
         hospitalDatabase.insert("hospital", null, row);
@@ -49,7 +51,7 @@ public class HospitalDBHelper extends SQLiteOpenHelper
     public Cursor fetchAllHospitals()
     {//Gets all Hospitals
         hospitalDatabase = getReadableDatabase();
-        String[] rowDetails = {"id", "name", "phone", "email", "location"};
+        String[] rowDetails = {"id", "name", "phone", "email", "password", "location"};
         Cursor cursor = hospitalDatabase.query("hospital", rowDetails, null, null, null, null, null);
         if (cursor != null)
             cursor.moveToFirst();
@@ -74,6 +76,17 @@ public class HospitalDBHelper extends SQLiteOpenHelper
         String[] arg = {name};
 
         Cursor cursor = hospitalDatabase.rawQuery("Select email from hospital where name like ?", arg);
+        cursor.moveToFirst();
+        hospitalDatabase.close();
+        return cursor.getString(0);
+    }
+
+    public String getHospitalPassword(String name)
+    {
+        hospitalDatabase = getReadableDatabase();
+        String[] arg = {name};
+
+        Cursor cursor = hospitalDatabase.rawQuery("Select password from hospital where name like ?", arg);
         cursor.moveToFirst();
         hospitalDatabase.close();
         return cursor.getString(0);

@@ -3,9 +3,7 @@ package com.example.blooddonationapp;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
-import android.net.Uri;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -29,7 +27,7 @@ public class LoginActivity extends AppCompatActivity {
 
         Button login = (Button)findViewById(R.id.LoginBtn);
         login.setOnClickListener(v -> {
-            if (userName.getText().toString().equals(HospitalDB.getHospitalEmail("Ain Shams Uni")) && password.getText().toString().equals(HospitalDB.getHospitalPhone("Ain Shams Uni")))
+            if (userName.getText().toString().equals(HospitalDB.getHospitalEmail("Ain Shams Uni")) && password.getText().toString().equals(HospitalDB.getHospitalPassword("Ain Shams Uni")))
             {//Check for the hospital account
 
                 //Correct Email: "test@gmail.com"
@@ -46,10 +44,17 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
 
-        TextView newAccount = (TextView)findViewById(R.id.NewAccountBtn);
-        newAccount.setOnClickListener(v -> {
+        TextView newDonorAccount = (TextView)findViewById(R.id.NewDonorAccountBtn);
+        newDonorAccount.setOnClickListener(v -> {//go to new donor activity
 
             Intent i = new Intent(LoginActivity.this, RegisterDonorInfoActivity.class);
+            startActivity(i);
+        });
+
+        TextView newHospitalAccount = (TextView)findViewById(R.id.NewHospitalAccountBtn);
+        newHospitalAccount.setOnClickListener(v -> {//go to new hospital activity
+
+            Intent i = new Intent(LoginActivity.this, RegisterHospitalActivity.class);
             startActivity(i);
         });
     }

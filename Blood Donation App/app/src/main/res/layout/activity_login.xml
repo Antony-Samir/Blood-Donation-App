@@ -24,94 +24,86 @@
         android:id="@+id/UsernameTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="49dp"
-        android:layout_marginTop="96dp"
-        android:layout_marginEnd="295dp"
-        android:layout_marginBottom="16dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginBottom="32dp"
         android:text="@string/email"
         app:layout_constraintBottom_toTopOf="@+id/UsernameTxt"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.031"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
         android:id="@+id/UsernameTxt"
         android:layout_width="wrap_content"
-        android:layout_height="50dp"
-        android:layout_marginStart="99dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="99dp"
-        android:layout_marginBottom="32dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="122dp"
+        android:layout_marginBottom="115dp"
         android:ems="10"
         android:importantForAutofill="no"
         android:inputType="textPersonName"
-        app:layout_constraintBottom_toTopOf="@+id/PasswordTextView"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/UsernameTextView" />
+        app:layout_constraintBottom_toTopOf="@+id/PasswordTxt"
+        app:layout_constraintStart_toEndOf="@+id/UsernameTextView"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/PasswordTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="50dp"
-        android:layout_marginTop="32dp"
-        android:layout_marginEnd="295dp"
-        android:layout_marginBottom="16dp"
+        android:layout_marginStart="49dp"
+        android:layout_marginEnd="49dp"
+        android:layout_marginBottom="32dp"
         android:text="@string/password"
         app:layout_constraintBottom_toTopOf="@+id/PasswordTxt"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/UsernameTxt" />
+        app:layout_constraintEnd_toStartOf="@+id/LoginBtn"
+        app:layout_constraintStart_toStartOf="@+id/Background" />
 
     <EditText
         android:id="@+id/PasswordTxt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="99dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="99dp"
-        android:layout_marginBottom="32dp"
+        android:layout_marginBottom="215dp"
         android:ems="10"
         android:importantForAutofill="no"
         android:inputType="textPassword"
-        app:layout_constraintBottom_toTopOf="@+id/LoginBtn"
+        app:layout_constraintBottom_toTopOf="@+id/NewDonorAccountBtn"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/PasswordTextView" />
+        app:layout_constraintTop_toBottomOf="@+id/UsernameTxt" />
 
     <Button
         android:id="@+id/LoginBtn"
         android:layout_width="88dp"
         android:layout_height="48dp"
-        android:layout_marginStart="162dp"
-        android:layout_marginTop="58dp"
-        android:layout_marginEnd="161dp"
-        android:layout_marginBottom="282dp"
+        android:layout_marginTop="255dp"
+        android:layout_marginBottom="255dp"
         android:text="@string/login"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toBottomOf="@+id/Background"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/PasswordTxt"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintTop_toBottomOf="@+id/UsernameTxt" />
 
     <TextView
-        android:id="@+id/NewAccountBtn"
+        android:id="@+id/NewDonorAccountBtn"
         android:layout_width="77dp"
-        android:layout_height="19dp"
-        android:layout_marginStart="312dp"
-        android:layout_marginTop="528dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="184dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="41dp"
+        android:layout_marginEnd="42dp"
+        android:layout_marginBottom="51dp"
         android:text="@string/new_donor"
+        app:layout_constraintBottom_toTopOf="@+id/NewHospitalAccountBtn"
+        app:layout_constraintEnd_toEndOf="@+id/NewHospitalAccountBtn"
+        app:layout_constraintStart_toEndOf="@+id/LoginBtn"
+        app:layout_constraintStart_toStartOf="@+id/NewHospitalAccountBtn"
+        app:layout_constraintTop_toBottomOf="@+id/PasswordTxt" />
+
+    <TextView
+        android:id="@+id/NewHospitalAccountBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="29dp"
+        android:layout_marginBottom="90dp"
+        android:text="@string/new_hospital"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/NewDonorAccountBtn" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

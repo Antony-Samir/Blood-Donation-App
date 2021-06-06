@@ -46,9 +46,10 @@ public class MainActivity extends AppCompatActivity {
             }, 3000);
 
             final HospitalDBHelper HospitalDB = new HospitalDBHelper(this);
-            HospitalDB.createNewHospital("Ain Shams Uni", 123, "test@gmail.com", "Abassya");
+            HospitalDB.createNewHospital("Ain Shams Uni", 123, "test@gmail.com", "321", "Abassya");
 
             Toast.makeText(getApplicationContext(), HospitalDB.getHospitalEmail("Ain Shams Uni"), Toast.LENGTH_SHORT).show();
+            Toast.makeText(getApplicationContext(), HospitalDB.getHospitalPassword("Ain Shams Uni"), Toast.LENGTH_SHORT).show();
             Toast.makeText(getApplicationContext(), HospitalDB.getHospitalLocation("Ain Shams Uni"), Toast.LENGTH_SHORT).show();
             Toast.makeText(getApplicationContext(), HospitalDB.getHospitalPhone("Ain Shams Uni"), Toast.LENGTH_SHORT).show();
 

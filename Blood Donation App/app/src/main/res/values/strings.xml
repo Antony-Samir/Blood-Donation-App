@@ -21,7 +21,7 @@
     <string name="send_mail">Send Mail</string>
     <string name="our_location">Our Location</string>
     <string name="login">Login</string>
-    <string name="password">Password:</string>
+    <string name="password">Password</string>
     <string name="username">Username:</string>
     <string name="hospital">Hospital</string>
     <string name="fetch_all_donors">Fetch All Donors</string>
@@ -41,6 +41,7 @@
     <string name="is_high_blood_pressure">Is High Blood Pressure?</string>
     <string name="is_diabetic">Is Diabetic?</string>
     <string name="all_donors">All Donors</string>
+    <string name="new_hospital">New Hospital?</string>
 
     <string-array name="bloodType">
         <item>AB+</item>

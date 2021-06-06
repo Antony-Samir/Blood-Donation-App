@@ -10,8 +10,11 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.BloodDonationApp">
         <activity
+            android:name=".RegisterHospitalActivity"
+            android:label="Register Hospital Account" />
+        <activity
             android:name=".RegisterDonorHealthActivity"
-            android:label="Register Health Information"/>
+            android:label="Register Health Information" />
         <activity
             android:name=".AllDonorsActivity"
             android:label="All Donors" />
