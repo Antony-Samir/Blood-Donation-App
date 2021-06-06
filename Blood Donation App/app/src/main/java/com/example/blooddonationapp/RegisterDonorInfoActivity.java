@@ -24,7 +24,7 @@ public class RegisterDonorInfoActivity extends AppCompatActivity {
         final EditText age = (EditText)findViewById(R.id.AgeTxt);
         final EditText email = (EditText)findViewById(R.id.emailTxt);
 
-        final Spinner location = (Spinner)findViewById(R.id.LocationSpinner2);
+        final Spinner location = (Spinner)findViewById(R.id.LocationSpinnerDonorRegister);
 
         final RadioGroup gender = (RadioGroup)findViewById(R.id.GenderRadioGroup);
         final String[] donorGender = {null};

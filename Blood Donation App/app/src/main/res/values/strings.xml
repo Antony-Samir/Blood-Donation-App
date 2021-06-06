@@ -42,6 +42,7 @@
     <string name="is_diabetic">Is Diabetic?</string>
     <string name="all_donors">All Donors</string>
     <string name="new_hospital">New Hospital?</string>
+    <string name="hospital_signup">Hospital Signup</string>
 
     <string-array name="bloodType">
         <item>AB+</item>

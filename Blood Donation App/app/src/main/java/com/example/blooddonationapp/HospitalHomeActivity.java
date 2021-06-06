@@ -16,7 +16,7 @@ public class HospitalHomeActivity extends AppCompatActivity {
         setContentView(R.layout.activity_hospital_home);
 
         final Spinner bloodType = (Spinner)findViewById(R.id.BloodTypeSpinner);
-        final Spinner location = (Spinner)findViewById(R.id.LocationSpinner);
+        final Spinner location = (Spinner)findViewById(R.id.LocationSpinnerHospitalHome);
 
 
         Button findDonor = (Button)findViewById(R.id.findDonorBtn);

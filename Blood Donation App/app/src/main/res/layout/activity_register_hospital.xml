@@ -14,7 +14,7 @@
         android:layout_marginTop="1dp"
         android:layout_marginBottom="18dp"
         android:background="#0F439D"
-        app:layout_constraintBottom_toTopOf="@+id/textView4"
+        app:layout_constraintBottom_toTopOf="@+id/hospitalNameTxtView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -23,7 +23,7 @@
             android:id="@+id/Background"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/be_a_donor"
+            android:text="@string/hospital_signup"
             android:textColor="#D61010"
             android:textSize="20sp"
             android:textStyle="bold"
@@ -48,123 +48,143 @@
 
 
     <TextView
-        android:id="@+id/textView4"
+        android:id="@+id/hospitalNameTxtView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="28dp"
+        android:layout_marginEnd="345dp"
         android:layout_marginBottom="19dp"
         android:text="@string/name"
-        app:layout_constraintBottom_toTopOf="@+id/editTextTextPersonName2"
+        app:layout_constraintBottom_toTopOf="@+id/hospitalNameTxt"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/toolbar" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName2"
+        android:id="@+id/hospitalNameTxt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="28dp"
+        android:layout_marginEnd="170dp"
         android:layout_marginBottom="29dp"
         android:ems="10"
+        android:importantForAutofill="no"
         android:inputType="textPersonName"
-        android:text="Name"
-        app:layout_constraintBottom_toTopOf="@+id/textView5"
+        app:layout_constraintBottom_toTopOf="@+id/hospitalPhoneTxtView"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+        app:layout_constraintTop_toBottomOf="@+id/hospitalNameTxtView" />
 
     <TextView
-        android:id="@+id/textView5"
+        android:id="@+id/hospitalPhoneTxtView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="28dp"
+        android:layout_marginEnd="342dp"
         android:layout_marginBottom="19dp"
         android:text="@string/phone"
-        app:layout_constraintBottom_toTopOf="@+id/editTextPhone"
+        app:layout_constraintBottom_toTopOf="@+id/hospitalPhoneTxt"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName2" />
+        app:layout_constraintTop_toBottomOf="@+id/hospitalNameTxt" />
 
     <EditText
-        android:id="@+id/editTextPhone"
+        android:id="@+id/hospitalPhoneTxt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="28dp"
+        android:layout_marginEnd="170dp"
         android:layout_marginBottom="29dp"
         android:ems="10"
         android:inputType="phone"
-        app:layout_constraintBottom_toTopOf="@+id/textView6"
+        app:layout_constraintBottom_toTopOf="@+id/hospitalEmailTxtView"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView5" />
+        app:layout_constraintTop_toBottomOf="@+id/hospitalPhoneTxtView"
+        android:importantForAutofill="no" />
 
     <TextView
-        android:id="@+id/textView6"
+        android:id="@+id/hospitalEmailTxtView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="28dp"
+        android:layout_marginEnd="348dp"
         android:layout_marginBottom="19dp"
         android:text="@string/email"
-        app:layout_constraintBottom_toTopOf="@+id/editTextTextEmailAddress"
+        app:layout_constraintBottom_toTopOf="@+id/hospitalEmailTxt"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextPhone" />
+        app:layout_constraintTop_toBottomOf="@+id/hospitalPhoneTxt" />
 
     <EditText
-        android:id="@+id/editTextTextEmailAddress"
+        android:id="@+id/hospitalEmailTxt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="28dp"
+        android:layout_marginEnd="170dp"
         android:layout_marginBottom="30dp"
         android:ems="10"
         android:inputType="textEmailAddress"
-        app:layout_constraintBottom_toTopOf="@+id/textView8"
+        app:layout_constraintBottom_toTopOf="@+id/hospitalPasswordTxtView"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView6" />
+        app:layout_constraintTop_toBottomOf="@+id/hospitalEmailTxtView"
+        android:importantForAutofill="no" />
 
     <TextView
-        android:id="@+id/textView8"
+        android:id="@+id/hospitalPasswordTxtView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="28dp"
+        android:layout_marginEnd="320dp"
         android:layout_marginBottom="19dp"
         android:text="@string/password"
-        app:layout_constraintBottom_toTopOf="@+id/editTextTextPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/hospitalPasswordTxt"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextEmailAddress" />
+        app:layout_constraintTop_toBottomOf="@+id/hospitalEmailTxt" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName"
+        android:id="@+id/hospitalPasswordTxt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="28dp"
+        android:layout_marginEnd="170dp"
         android:layout_marginBottom="22dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="Name"
         app:layout_constraintBottom_toTopOf="@+id/textView7"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView8" />
+        app:layout_constraintTop_toBottomOf="@+id/hospitalPasswordTxtView"
+        android:importantForAutofill="no" />
 
     <TextView
         android:id="@+id/textView7"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="28dp"
+        android:layout_marginEnd="327dp"
         android:layout_marginBottom="19dp"
         android:text="@string/location"
-        app:layout_constraintBottom_toTopOf="@+id/locationSpinner"
+        app:layout_constraintBottom_toTopOf="@+id/LocationSpinnerHospitalSignup"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName" />
+        app:layout_constraintTop_toBottomOf="@+id/hospitalPasswordTxt" />
 
     <Spinner
-        android:id="@+id/locationSpinner"
+        android:id="@+id/LocationSpinnerHospitalSignup"
         android:layout_width="411dp"
         android:layout_height="0dp"
         android:layout_marginBottom="43dp"
         android:entries="@array/Location"
-        app:layout_constraintBottom_toTopOf="@+id/button"
+        app:layout_constraintBottom_toTopOf="@+id/hospitalSubmitBtn"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView7" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/hospitalSubmitBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="21dp"
@@ -172,6 +192,6 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/locationSpinner" />
+        app:layout_constraintTop_toBottomOf="@+id/LocationSpinnerHospitalSignup" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
