@@ -76,7 +76,7 @@ public class RegisterDonorHealthActivity extends AppCompatActivity {
                         bloodType.getSelectedItem().toString());
 
 
-                Toast.makeText(getApplicationContext(), "Your Data Stored Successfully!", Toast.LENGTH_LONG).show();
+                Toast.makeText(getApplicationContext(), "Your Data Stored Successfully!", Toast.LENGTH_SHORT).show();
 
                 Intent i = new Intent(RegisterDonorHealthActivity.this, InformationActivity.class);
                 startActivity(i);

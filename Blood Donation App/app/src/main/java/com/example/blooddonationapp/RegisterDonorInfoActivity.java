@@ -65,13 +65,12 @@ public class RegisterDonorInfoActivity extends AppCompatActivity {
 
 
 
-                Toast.makeText(getApplicationContext(), "Please Complete Your Data", Toast.LENGTH_LONG).show();
+                Toast.makeText(getApplicationContext(), "Please Complete Your Data", Toast.LENGTH_SHORT).show();
 
                 Intent i = new Intent(RegisterDonorInfoActivity.this, RegisterDonorHealthActivity.class);
                 i.putExtra("donorName", name.getText().toString());
 
                 startActivity(i);
-
 
 
                 name.getText().clear();

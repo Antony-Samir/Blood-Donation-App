@@ -54,8 +54,6 @@ public class InformationActivity extends AppCompatActivity {
             emailIntent.putExtra(Intent.EXTRA_EMAIL, new String[] {"hosp@asush.asu.edu.eg"}); // recipients
             emailIntent.putExtra(Intent.EXTRA_SUBJECT, "Reserve Appointment");
             emailIntent.putExtra(Intent.EXTRA_TEXT, "I want to reserve an appointment at the hospital.");
-            //emailIntent.putExtra(Intent.EXTRA_STREAM, Uri.parse("content://path/to/email/attachment"));
-            // You can also attach multiple items by passing an ArrayList of Uris
             startActivity(emailIntent);
         });
 
@@ -63,7 +61,6 @@ public class InformationActivity extends AppCompatActivity {
         TextView calendar = (TextView)findViewById(R.id.calendarTxtView);
         calendar.setOnClickListener(v -> {
 
-            // Event is on January 23, 2021 -- from 7:30 AM to 10:30 AM.
             Intent calendarIntent = new Intent(Intent.ACTION_INSERT, CalendarContract.Events.CONTENT_URI);
             Calendar beginTime = Calendar.getInstance();
             beginTime.set(2021, 5, 15, 7, 30);

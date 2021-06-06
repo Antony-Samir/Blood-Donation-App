@@ -25,16 +25,17 @@ public class DonorDBHelper extends SQLiteOpenHelper {
                 "age integer," +
                 "email text," +
                 "location text," +
-                "isDiabetic integer," +
+                "isDiabetic text," +
                 "isHighBloodPressure text," +
                 "bloodType text)"
         );
     }
 
     @Override
-    public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
+    public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion)
+    {
 
-        db.execSQL("drop table if exists movie");
+        db.execSQL("drop table if exists donor");
         onCreate(db);
     }
 
@@ -64,7 +65,7 @@ public class DonorDBHelper extends SQLiteOpenHelper {
     }
 
     public Cursor fetchAllDonors()
-    {
+    {//Gets all Donors
         donorDatabase = getReadableDatabase();
         String[] rowDetails = {"id", "name", "gender", "phone", "age", "email", "location", "isDiabetic", "isHighBloodPressure", "bloodType"};
         Cursor cursor = donorDatabase.query("donor", rowDetails, null, null, null, null, null);

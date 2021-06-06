@@ -53,6 +53,7 @@ public class AllDonorsActivity extends AppCompatActivity {
             Toast.makeText(getApplicationContext(), "No Donors to Show", Toast.LENGTH_SHORT).show();
         }
 
+        //Gets donor data
         viewAllList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {

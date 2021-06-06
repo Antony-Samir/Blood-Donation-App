@@ -10,6 +10,7 @@ import android.os.Looper;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Spinner;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -27,7 +28,7 @@ public class MainActivity extends AppCompatActivity {
         firstTime = sharedPreferences.getBoolean("firstTime", true);
 
         if (firstTime)
-        {
+        {//To show the splash screen for 3 seconds
             getSupportActionBar().hide();
             final Handler handler = new Handler(Looper.getMainLooper());
             handler.postDelayed(new Runnable() {
@@ -43,9 +44,17 @@ public class MainActivity extends AppCompatActivity {
                     finish();
                 }
             }, 3000);
+
+            final HospitalDBHelper HospitalDB = new HospitalDBHelper(this);
+            HospitalDB.createNewHospital("Ain Shams Uni", 123, "test@gmail.com", "Abassya");
+
+            Toast.makeText(getApplicationContext(), HospitalDB.getHospitalEmail("Ain Shams Uni"), Toast.LENGTH_SHORT).show();
+            Toast.makeText(getApplicationContext(), HospitalDB.getHospitalLocation("Ain Shams Uni"), Toast.LENGTH_SHORT).show();
+            Toast.makeText(getApplicationContext(), HospitalDB.getHospitalPhone("Ain Shams Uni"), Toast.LENGTH_SHORT).show();
+
         }
         else
-        {
+        {//Not the 1st time
             Intent i = new Intent(getApplicationContext(), LoginActivity.class);
             startActivity(i);
             finish();

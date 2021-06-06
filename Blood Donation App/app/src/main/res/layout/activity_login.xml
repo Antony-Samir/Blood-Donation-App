@@ -28,9 +28,10 @@
         android:layout_marginTop="96dp"
         android:layout_marginEnd="295dp"
         android:layout_marginBottom="16dp"
-        android:text="@string/username"
+        android:text="@string/email"
         app:layout_constraintBottom_toTopOf="@+id/UsernameTxt"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.031"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
