@@ -55,7 +55,7 @@ public class ResultDonorsActivity extends AppCompatActivity {
         viewList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                String phone = donorDB.getDonorPhone(((TextView) view).getText().toString()).toString();
+                String phone = donorDB.getDonorPhone(((TextView) view).getText().toString());
                 //Toast.makeText(getApplicationContext(), phone, Toast.LENGTH_SHORT).show();
                 Uri number = Uri.parse("tel:" + phone);
                 Intent callIntent = new Intent(Intent.ACTION_DIAL, number);

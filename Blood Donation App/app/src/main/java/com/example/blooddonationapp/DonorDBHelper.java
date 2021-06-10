@@ -53,14 +53,14 @@ public class DonorDBHelper extends SQLiteOpenHelper {
         donorDatabase.close();
     }
 
-    public void updateDonorHealth(String oldName, String isDiabetic, String isHighBloodPressure, String bloodType)
+    public void updateDonorHealth(String name, String isDiabetic, String isHighBloodPressure, String bloodType)
     {
         donorDatabase = getWritableDatabase();
         ContentValues row = new ContentValues();
         row.put("isDiabetic", isDiabetic);
         row.put("isHighBloodPressure", isHighBloodPressure);
         row.put("bloodType", bloodType);
-        donorDatabase.update("donor", row, "name like?", new String[]{oldName});
+        donorDatabase.update("donor", row, "name like?", new String[]{name});
         donorDatabase.close();
     }
 

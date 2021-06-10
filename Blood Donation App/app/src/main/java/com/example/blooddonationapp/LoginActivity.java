@@ -2,6 +2,7 @@ package com.example.blooddonationapp;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
@@ -9,6 +10,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
+import android.os.Vibrator;
 
 public class LoginActivity extends AppCompatActivity {
 
@@ -19,7 +21,8 @@ public class LoginActivity extends AppCompatActivity {
 
         final HospitalDBHelper HospitalDB = new HospitalDBHelper(this);
 
-
+        // Get instance of Vibrator from current Context
+        Vibrator vibrator = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
 
 
         EditText userName = (EditText)findViewById(R.id.UsernameTxt);
@@ -47,7 +50,9 @@ public class LoginActivity extends AppCompatActivity {
                 }
                 cursor.moveToNext();
             }
-                Toast.makeText(getApplicationContext(), "Username or Password is wrong", Toast.LENGTH_SHORT).show();
+                // Vibrate for 400 milliseconds
+                vibrator.vibrate(400);
+                Toast.makeText(getApplicationContext(), "Username or Password is Wrong!", Toast.LENGTH_SHORT).show();
         });
 
         TextView newDonorAccount = (TextView)findViewById(R.id.NewDonorAccountBtn);
